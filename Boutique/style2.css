@@ -1,0 +1,240 @@
+/* Reset and global styles */
+body, h2, h3, a {
+    margin: 0;
+    padding: 0;
+    font-family: kosugi;
+    text-decoration: none;
+    color: #000000;
+}
+
+body {
+    background-color: white;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background-color: #1C1C1A;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+}
+
+.header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; 
+    gap: 20px; 
+    padding-right: 20px; 
+    margin: 0;
+}
+
+.nav ul li a {
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav ul li a:hover {
+    background: #444;
+}
+
+/* Featured Section */
+.featured {
+    padding: 50px 0;
+    background: #FFFFFF;
+    text-align: center;
+}
+
+.featured h1, h3 {
+    color: #000000;
+    padding: 100px;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.featured p
+{
+    color: #000000;
+}
+
+.watch-grid {
+    display: grid;
+    
+    gap: 20px;
+        grid-template-columns: repeat(3, 1fr); 
+        
+}
+
+.watch {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: -2px 2px 5px rgb(0 0 0 / 42%);
+}
+
+.watch img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    width: 361px;
+    height: 516px;
+    border-radius: 5px;
+}
+
+/* Style des boutons Ajouter au panier */
+.btn-add-to-cart {
+    background: #08C5D1; 
+    color: #FFFFFF; 
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px; 
+}
+
+.btn-add-to-cart:hover {
+    background: #212E53;
+}
+
+
+
+/* Footer */
+.footer {
+    background: #1C1C1A;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer ul {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer ul li a {
+    color: #fff;
+}
+
+.footer .social-icons a {
+    margin: 0 10px;
+}
+
+.footer .social-icons img {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+/* Responsive CSS pour les tablettes */
+@media (max-width: 768px) {
+    /* Réduire les espacements dans le header */
+    .header {
+        padding: 10px 15px;
+    }
+
+    .header .logo {
+        font-size: 1.5rem; 
+    }
+
+    .nav ul {
+        gap: 10px; 
+        padding-right: 10px;
+    }
+
+    .nav ul li a {
+        font-size: 0.9rem; 
+        padding: 6px 10px;
+    }
+
+    /* Ajustement de la grille des montres */
+    .watch-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px; 
+    }
+
+    .watch img {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .featured h1, h3 {
+        font-size: 1.5rem; 
+        padding: 50px; 
+    }
+
+    .btn-add-to-cart {
+        font-size: 0.9rem; 
+        padding: 8px 15px;
+    }
+}
+
+/* Responsive CSS pour les téléphones */
+@media (max-width: 480px) {
+    /* Header */
+    .header .logo {
+        font-size: 1.2rem;
+    }
+
+    .nav ul {
+        gap: 5px;
+    }
+
+    .nav ul li a {
+        font-size: 0.8rem; 
+        padding: 4px 8px; 
+    }
+
+    /* Grille des montres */
+    .watch-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .watch img {
+        width: 100%; 
+        height: auto;
+    }
+
+    .featured h1, h3 {
+        font-size: 1.2rem; 
+        padding: 30px;
+    }
+
+    .btn-add-to-cart {
+        font-size: 0.8rem; 
+        padding: 6px 10px;
+    }
+
+    .footer {
+        padding: 15px 10px; 
+    }
+
+    .footer ul li {
+        margin: 0 5px; 
+    }
+}
